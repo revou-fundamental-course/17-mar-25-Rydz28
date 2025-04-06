@@ -1,0 +1,94 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematik Persegi</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Menambahkan font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Area Header Futuristik -->
+    <header>
+        <div id="particles-js"></div>
+        <div class="header-content">
+            <h1 class="holographic-text">Kalkulator Matematik Persegi</h1>
+            <p class="subtitle">Solusi digital untuk perhitungan matematika persegi</p>
+        </div>
+    </header>
+
+    <!-- Kontainer Kalkulator Interaktif -->
+    <main>
+        <div class="calculator-container">
+            <div class="card-3d">
+                <!-- Formulir Input Matematis -->
+                <form id="squareForm">
+                    <div class="input-group">
+                        <label for="sideLength">Panjang Sisi Persegi (cm)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="sideLength" placeholder="Masukkan nilai..." min="0" step="any" required>
+                            <span class="validation-icon"></span>
+                        </div>
+                        <p class="error-message" id="error-message"></p>
+                    </div>
+
+                    <!-- Tombol-tombol Aksi -->
+                    <div class="button-group">
+                        <!-- Tombol Kalkulasi Canggih -->
+                        <button type="submit" id="calculate-btn" class="primary-btn">
+                            <span class="btn-text">Hitung</span>
+                            <span class="loading-animation">
+                                <i class="fas fa-calculator"></i>
+                            </span>
+                        </button>
+                        
+                        <!-- Tombol Reset -->
+                        <button type="button" id="reset-btn" class="secondary-btn">
+                            <span class="btn-text">Reset</span>
+                            <i class="fas fa-undo"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Area Hasil Perhitungan -->
+                <div class="results-container" id="results">
+                    <h2>Hasil Perhitungan</h2>
+                    
+                    <!-- Visualisasi Persegi -->
+                    <div class="square-visualization-container">
+                        <div class="square-visualization" id="square-visualization">
+                            <div class="square" id="square-visual"></div>
+                            <div class="dimension-label" id="dimension-label">0 cm</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-item">
+                        <div class="result-label">Luas Persegi:</div>
+                        <div id="area-result" class="result-value">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Keliling Persegi:</div>
+                        <div id="perimeter-result" class="result-value">-</div>
+                    </div>
+                    <div class="formula-box">
+                        <div class="formula">
+                            <p><strong>Rumus Luas:</strong> sisi × sisi</p>
+                            <p><strong>Rumus Keliling:</strong> 4 × sisi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Kalkulator Matematik Persegi | Dibuat dengan <i class="fas fa-heart">Ryan Dzakwan Adriansyah</i></p>
+    </footer>
+
+    <script src="js/indexh.js"></script>
+</body>
+</html>
